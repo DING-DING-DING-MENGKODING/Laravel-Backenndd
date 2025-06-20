@@ -18,6 +18,7 @@ class LogSeed extends Seeder
             [
                 'user_id'           => '2', //jangan diubah karena dia admin_faskes
                 'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'detail_tipe'       => 'A+',
                 'tipe_pergerakan'   => 'masuk', //enum dari [masuk/keluar]
                 'jumlah'            => '12',
                 'keterangan'        => 'Sumbangan dari PMI Provinsi',
@@ -27,6 +28,7 @@ class LogSeed extends Seeder
             [
                 'user_id'           => '2', //jangan diubah karena dia admin_faskes
                 'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'detail_tipe'       => 'A+',
                 'tipe_pergerakan'   => 'keluar', //enum dari [masuk/keluar]
                 'jumlah'            => '1',
                 'keterangan'        => 'Bapak saya minta darah',
@@ -36,6 +38,7 @@ class LogSeed extends Seeder
             [
                 'user_id'           => '2', //jangan diubah karena dia admin_faskes
                 'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'detail_tipe'       => 'A-',
                 'tipe_pergerakan'   => 'masuk', //enum dari [masuk/keluar]
                 'jumlah'            => '25',
                 'keterangan'        => 'Sumbangan dari PMI Daerah',
@@ -44,7 +47,8 @@ class LogSeed extends Seeder
             ],
             [
                 'user_id'           => '2', //jangan diubah karena dia admin_faskes
-                'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'tipe_item'         => 'oksigen', //enum dari [darah/oksigen]
+                'detail_tipe'       => '6',
                 'tipe_pergerakan'   => 'keluar', //enum dari [masuk/keluar]
                 'jumlah'            => '1',
                 'keterangan'        => 'Korban Kecelakaan',

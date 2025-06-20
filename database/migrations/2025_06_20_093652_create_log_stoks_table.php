@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class)->constrained();
             $table->enum('tipe_item', ['darah', 'oksigen']);
+            $table->string('detail_tipe');
             $table->enum('tipe_pergerakan', ['masuk', 'keluar']);
             $table->integer('jumlah');
             $table->string('keterangan');

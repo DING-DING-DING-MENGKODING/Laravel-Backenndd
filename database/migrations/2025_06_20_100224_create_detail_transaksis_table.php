@@ -15,6 +15,8 @@ return new class extends Migration
         Schema::create('detail_transaksis', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Transaksi::class)->constrained();
+            $table->enum('tipe_item', ['darah', 'oksigen']);
+            $table->string('detail_tipe');
             $table->integer('jumlah');
             $table->timestamps();
         });
