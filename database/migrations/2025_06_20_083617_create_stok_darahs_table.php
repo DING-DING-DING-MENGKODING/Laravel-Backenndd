@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Faskes::class)->constrained();
             $table->foreignIdFor(JenisDarah::class)->constrained();
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }
