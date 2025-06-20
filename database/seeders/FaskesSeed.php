@@ -51,6 +51,34 @@ class FaskesSeed extends Seeder
                 'about'          => 'Puskesmas Tamamamaung Makassar adalah klinik yang terletak di Makassar, Sulawesi Selatan. Rumah sakit ini didirikan pada tahun xxxx dan berlokasi di Jalan Perintis Kemerdekaan, tak jauh dari kampus Universitas Hasanuddin. Rumah sakit ini mempunyai klinik spesialis',
                 'created_at'     => '2020-03-10 20:05:21',
             ],
+            [
+                'nama'           => 'RS Hermina Makassar',
+                'jenis_layanan'  => 'Rumah Sakit',
+                'alamat'         => 'Jl. Toddopuli Raya Timur No.7, Borong, Kec. Manggala, Kota Makassar',
+                'latitude'       => '-5.1526871',
+                'longitude'      => '119.4440595',
+                'about'          => 'RS Hermina Makassar adalah klinik yang terletak di Makassar, Sulawesi Selatan. Rumah sakit ini didirikan pada tahun xxxx dan berlokasi di Jalan Perintis Kemerdekaan, tak jauh dari kampus Universitas Hasanuddin. Rumah sakit ini mempunyai klinik spesialis',
+                'created_at'     => '2020-03-10 20:05:21',
+            ],
+            [
+                'nama'           => 'Klinik Bayangkara Panaikang',
+                'jenis_layanan'  => 'Klinik',
+                'alamat'         => 'Jl. Urip Sumoharjo Komp Aspol Panaikang No.KM7 No. A8, Karampuang, Kec. Panakkukang, Kota Makassar',
+                'latitude'       => '-5.1526628',
+                'longitude'      => '119.4441048',
+                'about'          => 'Klinik Bayangkara Panaikang adalah klinik yang terletak di Makassar, Sulawesi Selatan. Rumah sakit ini didirikan pada tahun xxxx dan berlokasi di Jalan Perintis Kemerdekaan, tak jauh dari kampus Universitas Hasanuddin. Rumah sakit ini mempunyai klinik spesialis',
+                'created_at'     => '2020-03-10 20:05:21',
+            ],
+            [
+                'nama'           => 'Puskesmas Ballaparang Kec. Rappocini',
+                'jenis_layanan'  => 'Puskesmas',
+                'alamat'         => 'Jl. NIkel III, Balla Parang, Kec. Rappocini, Kota Makassar',
+                'latitude'       => '-5.1517075',
+                'longitude'      => '119.4195507',
+                'about'          => 'Puskesmas Ballaparang adalah klinik yang terletak di Makassar, Sulawesi Selatan. Rumah sakit ini didirikan pada tahun xxxx dan berlokasi di Jalan Perintis Kemerdekaan, tak jauh dari kampus Universitas Hasanuddin. Rumah sakit ini mempunyai klinik spesialis',
+                'created_at'     => '2020-03-10 20:05:21',
+            ],
+            
         ];
 
         Faskes::insert($faskeses);

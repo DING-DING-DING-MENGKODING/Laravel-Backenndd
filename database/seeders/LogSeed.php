@@ -20,18 +20,36 @@ class LogSeed extends Seeder
                 'tipe_item'         => 'darah', //enum dari [darah/oksigen]
                 'tipe_pergerakan'   => 'masuk', //enum dari [masuk/keluar]
                 'jumlah'            => '12',
-                'keterangan'        => 'Sumbangan dari PMI',
+                'keterangan'        => 'Sumbangan dari PMI Provinsi',
                 'faskes_id'         => '1',
                 'created_at'        => '2020-03-07 20:05:21',
             ],
             [
-                'user_id'           => '2',
-                'tipe_item'         => 'oksigen',
-                'tipe_pergerakan'   => 'masuk',
-                'jumlah'            => '12',
-                'keterangan'        => 'Sumbangan dari PMI',
+                'user_id'           => '2', //jangan diubah karena dia admin_faskes
+                'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'tipe_pergerakan'   => 'keluar', //enum dari [masuk/keluar]
+                'jumlah'            => '1',
+                'keterangan'        => 'Bapak saya minta darah',
                 'faskes_id'         => '1',
-                'created_at'        => '2020-03-08 20:05:21',
+                'created_at'        => '2020-03-07 20:05:21',
+            ],
+            [
+                'user_id'           => '2', //jangan diubah karena dia admin_faskes
+                'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'tipe_pergerakan'   => 'masuk', //enum dari [masuk/keluar]
+                'jumlah'            => '25',
+                'keterangan'        => 'Sumbangan dari PMI Daerah',
+                'faskes_id'         => '2',
+                'created_at'        => '2020-03-07 20:05:21',
+            ],
+            [
+                'user_id'           => '2', //jangan diubah karena dia admin_faskes
+                'tipe_item'         => 'darah', //enum dari [darah/oksigen]
+                'tipe_pergerakan'   => 'keluar', //enum dari [masuk/keluar]
+                'jumlah'            => '1',
+                'keterangan'        => 'Korban Kecelakaan',
+                'faskes_id'         => '4',
+                'created_at'        => '2020-03-07 20:05:21',
             ],
         ];
 
