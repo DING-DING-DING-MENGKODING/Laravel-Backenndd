@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(UserSeed::class);
         $this->call(FaskesSeed::class);
+        $this->call(AmbulanceSeed::class);
 
 
         $darahs = [
