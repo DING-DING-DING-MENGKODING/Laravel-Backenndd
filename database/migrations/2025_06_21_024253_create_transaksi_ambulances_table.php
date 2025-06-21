@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transaksis', function (Blueprint $table) {
+        Schema::create('transaksi_ambulances', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained();
             $table->foreignIdFor(Faskes::class)->constrained();
@@ -29,7 +29,6 @@ return new class extends Migration
 
             $table->string('lokasi_user_latitude');
             $table->string('lokasi_user_longitude');
-            $table->enum('tipe_transaksi', ['Pemesanan Ambulans', 'Pengambilan Stok']);
             $table->enum('status', ['pending', 'assigned', 'completed']);
             $table->text('catatan_user')->nullable();
             $table->text('catatan_faskes')->nullable();
@@ -42,6 +41,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transaksis');
+        Schema::dropIfExists('transaksi_ambulances');
     }
 };

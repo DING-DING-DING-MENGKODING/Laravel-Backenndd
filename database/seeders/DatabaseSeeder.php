@@ -18,8 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(FaskesSeed::class);
         $this->call(AmbulanceSeed::class);
         $this->call(LogSeed::class);
-        $this->call(TransaksiSeed::class);
-
+        $this->call(TransaksiStokSeed::class);
+        $this->call(TransaksiAmbulanceSeed::class);
+        // $this->call(StokDarahSeed::class);
 
         $darahs = [
             ['nama_jenis' => 'A+'],

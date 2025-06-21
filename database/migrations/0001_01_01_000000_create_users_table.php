@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('nomor_whatsapp')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->enum('role', ['super_admin', 'admin_faskes', 'user_ambulance', 'user_mobile']);
+            $table->enum('role', ['admin_faskes', 'super_admin', 'user_ambulance', 'user_mobile']);
             $table->rememberToken();
             $table->timestamps();
         });

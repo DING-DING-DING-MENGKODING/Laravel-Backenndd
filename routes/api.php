@@ -6,7 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FaskesController;
 use App\Http\Controllers\AmbulanceController;
 use App\Http\Controllers\LogKontroller;
-use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\TransaksiStokController;
 
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'App\Http\Controllers\AuthController@login');
@@ -34,8 +34,9 @@ Route::delete('/ambulance/{id}', [AmbulanceController::class, 'destroy']);
 // --------------LOGKYUUU-------------
 Route::get('/log', [LogKontroller::class, 'index']);
 Route::get('/log/{id}', [LogKontroller::class, 'show']);
-// --------------TRANSAKSI-------------
-Route::get('/transaksi', [TransaksiController::class, 'index']);
+// --------------TRANSAKSI-STOKQUUU-------------
+Route::get('/transaksi-stok', [TransaksiStokController::class, 'index']);
+Route::post('/transaksi-stok', [TransaksiStokController::class, 'store']);
 
 
 
