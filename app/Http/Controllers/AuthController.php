@@ -95,7 +95,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6',
-            'nomor_whatsapp' => 'required|string|max:20', // tambahkan validasi ini
+            'nomor_whatsapp' => 'required|string|max:20',
         ]);
 
         if ($validator->fails()) {
@@ -105,8 +105,9 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'role' => $request->role,
             'password' => Hash::make($request->password),
-            'nomor_whatsapp' => $request->nomor_whatsapp, // tambahkan ini
+            'nomor_whatsapp' => $request->nomor_whatsapp,
         ]);
 
         $token = auth()->login($user);
