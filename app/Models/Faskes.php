@@ -14,4 +14,14 @@ class Faskes extends Model
         'latitude',
         'longitude',
     ];
+    
+    public function stokDarahs()
+    {
+        return $this->hasMany(StokDarah::class);
+    }
+
+    public function stokOksigens()
+    {
+        return $this->hasMany(StokOksigen::class);
+    }
 }

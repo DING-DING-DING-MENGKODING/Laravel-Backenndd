@@ -113,4 +113,61 @@ class AuthController extends Controller
 
         return $this->respondWithToken($token);
     }
+
+    public function update(Request $request)
+    {
+        $user = auth()->user();
+
+        $validated = $request->validate([
+            'name' => 'nullable|string|max:255',
+            'nomor_whatsapp' => 'nullable|string|max:20',
+            'password' => 'nullable|string|min:6|confirmed'
+        ]);
+
+        if (isset($validated['name'])) {
+            $user->name = $validated['name'];
+        }
+
+        if (isset($validated['nomor_whatsapp'])) {
+            $user->nomor_whatsapp = $validated['nomor_whatsapp'];
+        }
+
+        if (isset($validated['password'])) {
+            $user->password = Hash::make($validated['password']);
+        }
+
+        $user->save();
+
+        return response()->json([
+            'message' => 'Profil berhasil diperbarui.',
+            'data' => $user
+        ]);
+    }
+
+
+    /**
+     * Upload profile picture for authenticated user.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function uploadProfilePicture(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        $user = auth()->user();
+
+        $file = $request->file('image');
+        $path = $file->store('profile_pictures', 'public');
+
+        $user->image = $path;
+        $user->save();
+
+        return response()->json([
+            'message' => 'Foto profil berhasil diunggah.',
+            'image_url' => asset('storage/' . $path)
+        ]);
+    }
 }
